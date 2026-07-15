@@ -1,0 +1,23 @@
+[project]
+name = "database-assistant-mcp"
+version = "0.1.0"
+description = "Read-only database exploration and querying MCP server for PostgreSQL/MySQL (AWS RDS compatible)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.8.0",
+    "sqlglot>=26.0.0",
+    "asyncpg>=0.30.0",
+    "aiomysql>=0.2.0",
+    "python-dotenv>=1.1.0",
+    "pydantic>=2.0.0",
+    "openai>=1.0.0",
+]
+
+[tool.setuptools]
+packages = ["db", "sql", "export"]
+py-modules = ["mcp_server", "config"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
