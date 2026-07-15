@@ -101,8 +101,8 @@ Add to your Kiro MCP configuration:
 {
   "mcpServers": {
     "database-assistant": {
-      "command": "uv",
-      "args": ["run", "--directory", "/path/to/RDS", "mcp_server.py"],
+      "command": "/opt/homebrew/bin/uv",
+      "args": ["run", "--directory", "/path/to/database_mcp_server", "mcp_server.py"],
       "env": {
         "DB_HOST": "your-rds-endpoint.rds.amazonaws.com",
         "DB_PORT": "5432",
